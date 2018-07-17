@@ -1,0 +1,68 @@
+.content1{
+	width: 990px;
+	padding-left: 10px;
+	margin-top: 30px;
+}
+.content1_item{
+	width: 880px;
+	margin: 20px auto;
+	overflow: hidden;
+}
+.content1_item_img1{
+	width: 400px;
+	height: 225px;
+	float: left;
+	background-color: #ccc;
+	overflow: hidden;
+}
+.content1_item1{
+	width: 480px;
+	height: 225px;
+	float: left;
+}
+.content1_item1_img{
+	width: 180px;
+	height: 101px;
+	float: left;
+	background-color: #ccc;
+	margin-left: 60px;
+	overflow: hidden;
+}
+.content1_item1_img1{
+	margin-top: 23px
+}
+.content2_item1{
+	width: 100%;
+	height: 168px;
+	overflow: hidden;
+	margin-top: 30px;
+}
+.content2_item1 img{
+	width: 300px;
+	height: 168px;
+	background: #ccc;
+	float: left;
+
+}
+.content2_item1_right{
+	width: 580px;
+	height: 100%;
+	float: left;
+}
+.content2_item1 span{
+	font-size: 16px;
+	font-family: "苹方","Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";
+	font-weight: 600;
+	color: black;
+	margin-left: 50px;
+	
+}
+.content2_item1 p{
+	font-size: 12px;
+	font-family: "苹方","Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";
+	font-weight: 400;
+	color: black;
+	margin-left: 50px;
+	margin-top: 30px;
+	line-height: 20px;
+}

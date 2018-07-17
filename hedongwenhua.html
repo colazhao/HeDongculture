@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>河东文创</title>
+	<link rel="icon" href="img/河东logo.png">
+	<link rel="stylesheet" href="css/hedongwenchuang.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/hedongwenhua.css">
+	<script src="js/wanmeiyundongkuangjia.js"></script>
+</head>
+<body>
+	<!-- 头部部分开始 -->
+	<section id="header">
+		<div class="header_neirong_left">
+			<img src="img/河东logo.png" alt="" class="header_neirong_logo">
+			<span class="header_neirong_biaoti">凤起离人归</span>
+			<span class="header_neirong_biaoti1">Hedong Culture</span>
+		</div>
+		<!-- <div class="header_neirong"> -->
+			<div class="header_neirong_right">
+				<a href="shouye.html" id="header_neirong_shouye">首页</a>
+				<a href="hedongwenhua.html" id="header_neirong_shouye" class="header_neirong_shouye">河东文化</a>
+				<a href="lvxingdongtai.html" id="header_neirong_shouye">旅行动态</a>
+				<a href="wenchuangchanpin.html" id="header_neirong_shouye">文创产品</a>
+				<a href="sirendingzhi.html" id="header_neirong_shouye">私人定制</a>
+				<a href="guanyuwomen.html" id="header_neirong_shouye">关于我们</a>
+				<!-- <div id="header_neirong_line"></div> -->
+			</div>
+		<!-- </div> -->
+	</section>
+	<!-- 头部部分结束 -->
+
+	<!-- banner部分开始 -->
+	<section id="banner">
+		<ul class="banner_tu">
+			<li><img src="img/banner1.png" alt=""></li>
+			<li><img src="img/banner1.png" alt=""></li>
+			<li><img src="img/banner1.png" alt=""></li>
+			<li><img src="img/banner1.png" alt=""></li>
+		</ul>
+		<ol class="banner_pailie">
+			<li id="banner_pailie_active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ol>
+		<div class="banner_bottom">Home 首页>> Hedong culture 河东文化>></div>
+		<script>
+			window.onload=function(){
+				var oSec=document.getElementById('banner');
+				var oUl=oSec.getElementsByTagName('ul')[0];
+				var oLi=oUl.getElementsByTagName('li');
+				var oBtn=oSec.getElementsByTagName('ol')[0].getElementsByTagName('li');
+
+				var now=0;
+				for(var i=0;i<oBtn.length;i++)
+				{
+					oBtn[i].index=i;
+					oBtn[i].onclick=function()
+					{
+						now=this.index;
+						tab();
+					}
+					
+				}
+
+				function tab()
+				{
+					for(var i=0;i<oBtn.length;i++)
+						 {
+						 	oBtn[i].id='';
+						 }
+						oBtn[now].id='banner_pailie_active';
+						// oUl.style.top=-384*this.index+'px';
+						startmove(oUl,{left:-1349*now});
+				}
+
+				function next()
+				{
+					now++;
+					if(now==oBtn.length)
+					{
+						now=0;
+					}
+					tab();
+				}
+
+				var timer=setInterval(next,2000);
+
+				oSec.onmouseover=function()
+				{
+					clearInterval(timer);
+				}
+				oSec.onmouseout=function()
+				{
+					timer=setInterval(next,2000);
+				}
+			}
+		</script>
+	</section>
+	<!-- banner部分结束 -->
+
+	<!-- 内容部分开始 -->
+	<section id="content">
+		<div class="content_item1">HEDONG CULTURE</div>
+		<div class="content_item1 content_item2">河东文化</div>
+		<div class="content_item1 content_item3">华夏根祖文化在河东运城</div>
+		<div class="content_item4">
+			<div class="content_item4_line"></div>
+			<div class="content_item4_yuan"></div>
+			<span>2659人浏览过</span>
+			<div class="content_item4_yuan"></div>
+			<span>2018.5.30</span>
+			<div class="content_item4_line"></div>
+		</div>
+		<div class="content_item5">
+			<p>运城，古称河东。</p>
+			<p>这里，文化遗址荟萃，碑碣墓葬密集，文物景点星罗密布，名胜古迹不可胜数,</p>
+			<p>堪称名副其实的华夏之祖，炎黄之根，中国之本。</p>
+			<p>这里蕴含着中华民族最深的根，最古的源，是联系全球华人的历史纽带，是华夏文化基因的重谱系依据.</p>
+			<p>随着时间的推移，人们对这块“中华民族的滥觞之地”有了越来越深刻、越来越一致的认识，那就是：二十年成就看深圳，一百年变迁看上海，一千年沧桑(元、明、清)看北京，三千年历史(秦、汉、唐)看西安，五千年文明(尧、舜、禹)看运城。只有到了运城，才能最直观地感知人类的始祖和起源。</p>
+			<p>那么，在这片古老而神秘的土地上，到底有哪些东西确属民族之祖、华夏之宗呢？最近，我们对源于运城的华夏根祖文化进行了初步整理和加工，形成这套资料，以期更多的人能走进运城，从中了解到运城是中华民族的根、祖、源、宗，并通过运城了解我们中华民族的远古文明。</p>
+		</div>
+	</section>
+	<!-- 内容部分结束 -->
+
+
+	<!-- 底部部分开始 -->
+	<section id="footer">
+		<div class="footer_center">
+			<div class="footer_top"></div>
+			<h1 class="footer_item">凤起离人归</h1>
+			<img src="img/地图.png" alt="" class="footer_map">
+			<div class="footer_tel">
+				<p>联系我们：00000000</p>
+				<p>地址：山西省运城市盐湖区</p>
+				<p>邮箱：0000000@163.com</p>
+			</div>
+		</div>
+	</section>
+	<div class="footer_bottom">版权所有</div>
+	<!-- 底部部分结束 -->
+</body>
+</html>

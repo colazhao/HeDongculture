@@ -1,0 +1,62 @@
+.content_item1{
+	font-size: 20px;
+	font-family: "苹方","Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";
+	font-weight: 600;
+	color: black;
+	text-align: center;
+	display: block;
+	margin-top: 50px;
+}
+.content_item2{
+	margin-top: 20px;
+}
+.content_item3{
+	font-size: 14px;
+	font-weight: 400;
+	margin-top: 18px;
+}
+.content_item4{
+	width: 880px;
+	height: 12px;
+	margin: 15px auto 0;
+}
+.content_item4_line{
+	width: 330px;
+	height: 1px;
+	background-color: #ccc;
+	margin-top: 5px;
+	margin-left: 2px;
+	float: left;
+}
+.content_item4_yuan{
+	width: 10px;
+	height: 10px;
+	background-color: #ccc;
+	border-radius: 10px;
+	margin-top: 1px;
+	margin-left: 13px;
+	float: left;
+}
+.content_item4 span{
+	font-size: 12px;
+	font-family: "苹方","Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";
+	font-weight: 400;
+	color: #ccc;
+	margin-left: 5px;
+	margin-right: 10px;
+	margin-top: -3px;
+	float: left;
+}
+.content_item5{
+	width: 880px;
+	margin: 30px auto 10px;
+}
+.content_item5 p{
+	font-size: 16px;
+	font-family: "苹方","Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";
+	font-weight: 400;
+	color: black;
+	text-align: center;
+	margin: 15px auto;
+	line-height: 30px;
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>河东文创</title>
+	<link rel="icon" href="img/河东logo.png">
+	<link rel="stylesheet" href="css/hedongwenchuang.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/lvxingdongtai.css">
+	<script src="js/wanmeiyundongkuangjia.js"></script>
+</head>
+<body>
+	<!-- 头部部分开始 -->
+	<section id="header">
+		<!-- <div class="header_neirong"> -->
+			<div class="header_neirong_left">
+				<img src="img/河东logo.png" alt="" class="header_neirong_logo">
+				<span class="header_neirong_biaoti">凤起离人归</span>
+				<span class="header_neirong_biaoti1">Hedong Culture</span>
+			</div>
+			<div class="header_neirong_right">
+				<a href="shouye.html" id="header_neirong_shouye">首页</a>
+				<a href="hedongwenhua.html" id="header_neirong_shouye">河东文化</a>
+				<a href="lvxingdongtai.html" id="header_neirong_shouye" class="header_neirong_shouye">旅行动态</a>
+				<a href="wenchuangchanpin.html" id="header_neirong_shouye">文创产品</a>
+				<a href="sirendingzhi.html" id="header_neirong_shouye">私人定制</a>
+				<a href="guanyuwomen.html" id="header_neirong_shouye">关于我们</a>
+				<!-- <div id="header_neirong_line"></div> -->
+			</div>
+		<!-- </div> -->
+	</section>
+	<!-- 头部部分结束 -->
+
+	<!-- banner部分开始 -->
+	<section id="banner">
+		<ul class="banner_tu">
+			<li><img src="img/banner1.png" alt=""></li>
+			<li><img src="img/banner1.png" alt=""></li>
+			<li><img src="img/banner1.png" alt=""></li>
+			<li><img src="img/banner1.png" alt=""></li>
+		</ul>
+		<ol class="banner_pailie">
+			<li id="banner_pailie_active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ol>
+		<div class="banner_bottom">Home 首页>> Travel dynamic 旅行动态>></div>
+		<script>
+			window.onload=function(){
+				var oSec=document.getElementById('banner');
+				var oUl=oSec.getElementsByTagName('ul')[0];
+				var oLi=oUl.getElementsByTagName('li');
+				var oBtn=oSec.getElementsByTagName('ol')[0].getElementsByTagName('li');
+
+				var now=0;
+				for(var i=0;i<oBtn.length;i++)
+				{
+					oBtn[i].index=i;
+					oBtn[i].onclick=function()
+					{
+						now=this.index;
+						tab();
+					}
+					
+				}
+
+				function tab()
+				{
+					for(var i=0;i<oBtn.length;i++)
+						 {
+						 	oBtn[i].id='';
+						 }
+						oBtn[now].id='banner_pailie_active';
+						// oUl.style.top=-384*this.index+'px';
+						startmove(oUl,{left:-1349*now});
+				}
+
+				function next()
+				{
+					now++;
+					if(now==oBtn.length)
+					{
+						now=0;
+					}
+					tab();
+				}
+
+				var timer=setInterval(next,2000);
+
+				oSec.onmouseover=function()
+				{
+					clearInterval(timer);
+				}
+				oSec.onmouseout=function()
+				{
+					timer=setInterval(next,2000);
+				}
+			}
+		</script>
+	</section>
+	<!-- banner部分结束 -->
+
+	<!-- 内容部分开始 -->
+	<section id="content">
+		<!-- 目的地开始 -->
+		<div class="content1">
+			<h1>目的地推荐</h1>
+			<div class="content1_item">
+				<div class="content1_item_img1">
+					<img src="img/旅游动态img1.jpg" alt="">
+				</div>
+				<div class="content1_item1">
+					<div class="content1_item1_img">
+						<img src="img/旅游动态img1.png" alt="">	
+					</div>
+					<div class="content1_item1_img">
+						<img src="img/旅游动态img1.png" alt="">	
+					</div>
+					<div class="content1_item1_img content1_item1_img1">
+						<img src="img/旅游动态img1.png" alt="">	
+					</div>
+					<div class="content1_item1_img content1_item1_img1">
+						<img src="img/旅游动态img1.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 目的地结束 -->
+
+		<!-- 旅行动态开始 -->
+		<div class="content1">
+			<h1>旅行动态</h1>
+			<div class="content1_item">
+
+				<div class="content2_item1">
+					<img src="img/旅游动态img1.png" alt="">
+					<div class="content2_item1_right">
+						<span>黄河大铁牛</span>
+						<p>黄河大铁牛位于山西省永济市城西十五公里，蒲州城西的黄河古道两岸。据文献记载，铁牛铸于唐开元十三年（725），共八尊，为稳固蒲津浮桥，维系秦晋交通而铸。元末桥毁，久置不用，故习称“镇河铁牛”。因黄河变迁，逐渐为泥沙埋没。</p>
+					</div>
+				</div>
+
+				<div class="content2_item1">
+					<img src="img/旅游动态img2.png" alt="">
+					<div class="content2_item1_right">
+						<span>舜帝陵</span>
+						<p>舜帝陵位于山西省运城市的鸣条岗西端，为中华民族“五帝”之一的舜帝的陵庙。是国家4A级景区、全国重点文物保护单位、全国首批旅游文化示范地。景区分舜帝大道、舜帝广场、舜帝公园、舜帝陵庙四大部分。其中陵冢启于禹时，舜帝陵庙始建于唐开元二十六年（738年），是景区内建造早、规模大，最具影响力的文物古迹。其本身蕴涵的历史文化、美学风土人情、建筑工艺等文化内涵，亦十分丰厚，弥足珍贵。孟子《离类下》中曾经记载：“舜生于诸冯，迁于负夏，本于鸣条”。其身上的传统道德之精髓，虽历5000年时光只剥蚀，在华夏子孙的心目中依然闪耀着绚丽夺目的光彩。</p>
+					</div>
+				</div>
+
+				<div class="content2_item1">
+					<img src="img/旅行动态img4.png" alt="">
+					<div class="content2_item1_right">
+						<span>普救寺</span>
+						<p>普救寺位于永济市蒲州镇西厢村的塬上。普救寺始建于唐武则天时期，原名西永清院，是一座佛教十方禅院。元代王实甫《崔莺莺待月西厢记》中说的“红娘月下牵红线，张生巧会崔莺莺”的爱情故事就发生在普救寺内。</p>
+					</div>
+				</div>
+
+				<div class="content2_item1">
+					<img src="img/旅游动态img3.png" alt="">
+					<div class="content2_item1_right">
+						<span>鹳雀楼</span>
+						<p>鹳雀楼，又名鹳鹊楼，因时有鹳雀栖其上而得名，位于山西省永济市蒲州古城西面的黄河东岸。始建于北周，由于楼体壮观，结构奇巧，加之周围风景秀丽，唐宋之际文人学士登楼赏景留下许多不朽诗篇，以王之涣《登鹳雀楼》最富盛名。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 旅行动态结束 -->
+	</section>
+	<!-- 内容部分结束 -->
+
+
+	<!-- 底部部分开始 -->
+	<section id="footer">
+		<div class="footer_center">
+			<div class="footer_top"></div>
+			<h1 class="footer_item">凤起离人归</h1>
+			<img src="img/地图.png" alt="" class="footer_map">
+			<div class="footer_tel">
+				<p>联系我们：00000000</p>
+				<p>地址：山西省运城市盐湖区</p>
+				<p>邮箱：0000000@163.com</p>
+			</div>
+		</div>
+	</section>
+	<div class="footer_bottom">版权所有</div>
+	<!-- 底部部分结束 -->
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>河东文创</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="img/河东logo.png">
+	<link rel="stylesheet" href="css/hedongwenchuang.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/shouye.css">
+	<script src="js/wanmeiyundongkuangjia.js"></script>
+</head>
+<body>
+	<!-- 头部部分开始 -->
+	<section id="header">
+		<!-- <div class="header_neirong"> -->
+			<div class="header_neirong_left">
+				<img src="img/河东logo.png" alt="" class="header_neirong_logo">
+				<span class="header_neirong_biaoti">凤起离人归</span>
+				<span class="header_neirong_biaoti1">Hedong Culture</span>
+			</div>
+			<div class="header_neirong_right">
+				<a href="shouye.html" id="header_neirong_shouye" class="header_neirong_shouye">首页</a>
+				<a href="hedongwenhua.html" id="header_neirong_shouye">河东文化</a>
+				<a href="lvxingdongtai.html" id="header_neirong_shouye">旅行动态</a>
+				<a href="wenchuangchanpin.html" id="header_neirong_shouye">文创产品</a>
+				<a href="sirendingzhi.html" id="header_neirong_shouye">私人定制</a>
+				<a href="guanyuwomen.html" id="header_neirong_shouye">关于我们</a>
+				<!-- <div id="header_neirong_line"></div> -->
+			</div>
+		<!-- </div> -->
+	</section>
+	<!-- 头部部分结束 -->
+
+	<!-- banner部分开始 -->
+	<section id="banner">
+		<div class="banner_tu">
+			<img src="img/banner1.png" alt="">
+			<img src="img/banner2.png" alt="">
+			<img src="img/banner3.png" alt="">
+			<img src="img/banner1.png" alt="">
+		</div>
+		<ol class="banner_pailie">
+			<li id="banner_pailie_active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ol>
+		<div class="banner_bottom">Home 首页>></div>
+
+		<script>
+			window.onload=function(){
+				var oSec=document.getElementById('banner');
+				var oUl=oSec.getElementsByTagName('div')[0];
+				var oLi=oUl.getElementsByTagName('img');
+				var oBtn=oSec.getElementsByTagName('ol')[0].getElementsByTagName('li');
+				var oLiwidth=oLi.offsetWidth;
+
+				var now=0;
+				for(var i=0;i<oBtn.length;i++)
+				{
+					oBtn[i].index=i;
+					oBtn[i].onclick=function()
+					{
+						now=this.index;
+						tab();
+					}
+					
+				}
+
+				function tab()
+				{
+					for(var i=0;i<oBtn.length;i++)
+						 {
+						 	oBtn[i].id='';
+						 }
+						oBtn[now].id='banner_pailie_active';
+						// oUl.style.top=-384*this.index+'px';
+						startmove(oUl,{left:-1349*now});
+				}
+
+				function next()
+				{
+					now++;
+					if(now==oBtn.length)
+					{
+						now=0;
+					}
+					tab();
+				}
+
+				var timer=setInterval(next,2000);
+
+				oSec.onmouseover=function()
+				{
+					clearInterval(timer);
+				}
+				oSec.onmouseout=function()
+				{
+					timer=setInterval(next,2000);
+				}
+			}
+		</script>
+	</section>
+	<!-- banner部分结束 -->
+
+	<!-- 内容部分开始 -->
+	<section id="content">
+		<div class="content1">
+			<img src="img/河东文创_03.png" alt="" class="content1_title">
+			<span class="content1_biaoti">华夏伊始，河东之初</span>
+			<p>运城，古称河东。这里，文化遗址荟萃，碑碣墓葬密集，文物景点星罗密布，名胜古迹
+不可胜数，堪称名副其实的华夏之祖，炎黄之根，中国之本。这里蕴含着中华民族最深
+的根，最古的源，是联系全球华人的历史纽带，是华夏文化基因的重谱系依据.</p>
+			<p>Yuncheng, ancient known as the river east. Here, the cultural relics are gathered, the stone tablet stone tomb is dense, the cultural relics scenic spot is dotted, places of interest.
+			The unbeatable number is a veritable ancestor of huaxia, the root of China, the root of China. It contains the deepest of the Chinese nation.
+			The roots, the oldest source, are the historical ties that link the global Chinese, and are the basis of the genealogy of Chinese culture.</p>
+		</div>
+		<!-- 旅游动态开始 -->
+		<div class="content2">
+			<img src="img/河东文创_07.png" alt="" class="content1_title">
+			<div class="content2_item1">
+				<div class="content2_item1_img">
+					<img src="img/旅游动态img1.png" alt="">
+				</div>
+				<div class="content2_item1_right">
+					<span>黄河大铁牛</span>
+					<span>全新运城，带你感受文化的魅力</span>
+					<div class="content2_item1_right_yuan"></div>
+					<p>3669人浏览过</p>
+					<div class="content2_item1_right_yuan"></div>
+					<p>2018.5.30</p>
+					<div class="content2_item1_right_gengduo">	</div>
+				</div>
+			</div>
+
+			<div class="content2_item1">
+				<div class="content2_item1_img">
+					<img src="img/旅游动态img2.png" alt="">
+				</div>
+				<div class="content2_item1_right">
+					<span>舜帝陵</span>
+					<span>全新运城，带你感受文化的魅力</span>
+					<div class="content2_item1_right_yuan"></div>
+					<p>3669人浏览过</p>
+					<div class="content2_item1_right_yuan"></div>
+					<p>2018.5.30</p>
+					<div class="content2_item1_right_gengduo">	</div>
+				</div>
+			</div>
+
+			<div class="content2_item1">
+				<div class="content2_item1_img">
+					<img src="img/旅游动态img3.png" alt="">
+				</div>
+				<div class="content2_item1_right">
+					<span>鹳雀楼</span>
+					<span>全新运城，带你感受文化的魅力</span>
+					<div class="content2_item1_right_yuan"></div>
+					<p>3669人浏览过</p>
+					<div class="content2_item1_right_yuan"></div>
+					<p>2018.5.30</p>
+					<div class="content2_item1_right_gengduo">	</div>
+				</div>
+			</div>
+		</div>
+		<!-- 旅游动态结束 -->
+		
+		<!-- 文创产品开始 -->
+		<div class="content3">
+			<img src="img/河东文创_11.png" alt="" class="content1_title">
+			<div class="content3_content">
+				<div class="content3_item1">
+					<div class="content3_item1_img">
+						<img src="img/旅游动态img1.jpg" alt="">
+					</div>
+					<span>文创产品</span>
+					<p>美味的享受，独特的韵味</p>
+					<div class="content3_item1_btn">进入</div>
+				</div>
+
+				<div class="content3_item1 content3_item2">
+					<div class="content3_item1_img">
+						<img src="img/旅游动态img1.jpg" alt="">
+						
+					</div>
+					<span>文创产品</span>
+					<p>美味的享受，独特的韵味</p>
+					<div class="content3_item1_btn">进入</div>
+				</div>
+
+				<div class="content3_item1 content3_item2">
+					<div class="content3_item1_img">
+						<img src="img/旅游动态img1.jpg" alt="">
+						
+					</div>
+					<span>文创产品</span>
+					<p>美味的享受，独特的韵味</p>
+					<div class="content3_item1_btn">进入</div>
+				</div>
+			</div>
+		</div>
+		<!-- 文创产品结束 -->
+
+		<!-- 私人定制开始 -->
+		<div class="content4">
+			<img src="img/河东文创_08_03.png" alt="" class="content1_title">
+			<div class="content3_content">
+				<div class="content4_item1">
+					<img src="img/旅行动态img4.png" alt="">
+				</div>
+				<div class="content4_item1 content4_item2">
+					<img src="img/旅行动态img4.png" alt="">
+				</div>
+				<div class="content4_item1 content4_item2">
+					<img src="img/旅行动态img4.png" alt="">
+				</div>
+
+				<div class="content4_item1">
+					<img src="img/旅行动态img4.png" alt="">
+				</div>
+				<div class="content4_item1 content4_item2">
+					<img src="img/旅行动态img4.png" alt="">	
+				</div>
+				<div class="content4_item1 content4_item2">
+					<img src="img/旅行动态img4.png" alt="">
+				</div>
+			</div>
+		</div>
+		<!-- 私人定制结束 -->
+	</section>
+	<!-- 内容部分结束 -->
+
+
+	<!-- 底部部分开始 -->
+	<section id="footer">
+		<div class="footer_center">
+			<div class="footer_top"></div>
+			<h1 class="footer_item">凤起离人归</h1>
+			<img src="img/地图.png" alt="" class="footer_map">
+			<div class="footer_tel">
+				<p>联系我们：00000000</p>
+				<p>地址：山西省运城市盐湖区</p>
+				<p>邮箱：0000000@163.com</p>
+			</div>
+		</div>
+	</section>
+	<div class="footer_bottom">版权所有</div>
+	<!-- 底部部分结束 -->
+</body>
+</html>

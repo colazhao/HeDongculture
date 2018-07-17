@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>河东文创</title>
+	<link rel="icon" href="img/河东logo.png">
+	<link rel="stylesheet" href="css/hedongwenchuang.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/wenchuangchanpin.css">
+	<script src="js/wanmeiyundongkuangjia.js"></script>
+</head>
+<body>
+	<!-- 头部部分开始 -->
+	<section id="header">
+		<!-- <div class="header_neirong"> -->
+			<div class="header_neirong_left">
+				<img src="img/河东logo.png" alt="" class="header_neirong_logo">
+				<span class="header_neirong_biaoti">凤起离人归</span>
+				<span class="header_neirong_biaoti1">Hedong Culture</span>
+			</div>
+			<div class="header_neirong_right">
+				<a href="shouye.html" id="header_neirong_shouye">首页</a>
+				<a href="hedongwenhua.html" id="header_neirong_shouye">河东文化</a>
+				<a href="lvxingdongtai.html" id="header_neirong_shouye">旅行动态</a>
+				<a href="wenchuangchanpin.html" id="header_neirong_shouye" class="header_neirong_shouye">文创产品</a>
+				<a href="sirendingzhi.html" id="header_neirong_shouye">私人定制</a>
+				<a href="guanyuwomen.html" id="header_neirong_shouye">关于我们</a>
+				<!-- <div id="header_neirong_line"></div> -->
+			</div>
+		<!-- </div> -->
+	</section>
+	<!-- 头部部分结束 -->
+
+	<!-- banner部分开始 -->
+	<section id="banner">
+		<ul class="banner_tu">
+			<li><img src="img/banner1.png" alt=""></li>
+			<li><img src="img/banner1.png" alt=""></li>
+			<li><img src="img/banner1.png" alt=""></li>
+			<li><img src="img/banner1.png" alt=""></li>
+		</ul>
+		<ol class="banner_pailie">
+			<li id="banner_pailie_active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ol>
+		<div class="banner_bottom">Home 首页>> Culture and Greative product 文创产品>></div>
+		<script>
+			window.onload=function(){
+				var oSec=document.getElementById('banner');
+				var oUl=oSec.getElementsByTagName('ul')[0];
+				var oLi=oUl.getElementsByTagName('li');
+				var oBtn=oSec.getElementsByTagName('ol')[0].getElementsByTagName('li');
+
+				var now=0;
+				for(var i=0;i<oBtn.length;i++)
+				{
+					oBtn[i].index=i;
+					oBtn[i].onclick=function()
+					{
+						now=this.index;
+						tab();
+					}
+					
+				}
+
+				function tab()
+				{
+					for(var i=0;i<oBtn.length;i++)
+						 {
+						 	oBtn[i].id='';
+						 }
+						oBtn[now].id='banner_pailie_active';
+						// oUl.style.top=-384*this.index+'px';
+						startmove(oUl,{left:-1349*now});
+				}
+
+				function next()
+				{
+					now++;
+					if(now==oBtn.length)
+					{
+						now=0;
+					}
+					tab();
+				}
+
+				var timer=setInterval(next,2000);
+
+				oSec.onmouseover=function()
+				{
+					clearInterval(timer);
+				}
+				oSec.onmouseout=function()
+				{
+					timer=setInterval(next,2000);
+				}
+			}
+		</script>
+	</section>
+	<!-- banner部分结束 -->
+
+	<!-- 内容部分开始 -->
+	<section id="content">
+	<!-- 文创产品1开始 -->
+		<div class="content1">
+			<h1>文创产品1</h1>
+			<div class="content1_item">
+				<div class="content1_item_left"></div>
+				<div class="content1_item_right">
+					<div class="content1_item_right_img1"></div>
+					<div class="content1_item_right_img1"></div>
+					<div class="content1_item_right_img1 content1_item_right_img2"></div>
+					<div class="content1_item_right_img1 content1_item_right_img2"></div>
+				</div>
+			</div>
+		</div>
+	<!-- 文创产品1结束 -->
+
+	<!-- 文创产品2开始 -->
+	<div class="content1">
+		<h1>文创产品2</h1>
+		<div class="content1_item">
+			<div class="content1_item1">
+				<div class="content1_item1_img"></div>
+				<span>文创产品1</span>
+				<p>文创产品1</p>
+			</div>
+
+			<div class="content1_item1 content1_item2">
+				<div class="content1_item1_img"></div>
+				<span>文创产品1</span>
+				<p>文创产品1</p>
+			</div>
+
+			<div class="content1_item1 content1_item2">
+				<div class="content1_item1_img"></div>
+				<span>文创产品1</span>
+				<p>文创产品1</p>
+			</div>
+		</div>
+	</div>
+	<!-- 文创产品2结束 -->
+
+	<!-- 文创产品3开始 -->
+	<div class="content1">
+		<h1>文创产品3</h1>
+		<div class="content1_item">
+			<div class="content3">
+				<div class="content3_left"></div>
+				<div class="content3_right">
+					<h2>文创产品3</h2>
+					<p>文创产品3</p>
+				</div>
+			</div>
+
+			<div class="content3">
+				<div class="content3_left"></div>
+				<div class="content3_right">
+					<h2>文创产品3</h2>
+					<p>文创产品3</p>
+				</div>
+			</div>
+
+			<div class="content3">
+				<div class="content3_left"></div>
+				<div class="content3_right">
+					<h2>文创产品3</h2>
+					<p>文创产品3</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 文创产品3结束 -->
+	</section>
+	<!-- 内容部分结束 -->
+
+
+	<!-- 底部部分开始 -->
+	<section id="footer">
+		<div class="footer_center">
+			<div class="footer_top"></div>
+			<h1 class="footer_item">凤起离人归</h1>
+			<img src="img/地图.png" alt="" class="footer_map">
+			<div class="footer_tel">
+				<p>联系我们：00000000</p>
+				<p>地址：山西省运城市盐湖区</p>
+				<p>邮箱：0000000@163.com</p>
+			</div>
+		</div>
+	</section>
+	<div class="footer_bottom">版权所有</div>
+	<!-- 底部部分结束 -->
+</body>
+</html>
